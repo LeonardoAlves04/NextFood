@@ -1,4 +1,4 @@
-## Ecommerce de periféricos e produtos para computadores
+## Aplicação de pedido de lanches/refeições
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=next&message=framework&color=blue&style=for-the-badge&logo=Next"/>
