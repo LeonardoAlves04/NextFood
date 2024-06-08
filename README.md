@@ -43,7 +43,7 @@ Um Ecommerce que vende mouses, teclados, monitores e coisas relacionadas a compu
 
 ## Deploy da Aplicação :dash:
 
-Deploy: https://next-store-leonardoalves04.vercel.app
+Deploy:
 
 ## Linguagens e libs utilizadas :books:
 
