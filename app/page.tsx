@@ -16,7 +16,7 @@ export default function Home() {
         <CategoryList />
       </div>
 
-      <div className="px-2 pt-6">
+      <div className="pt-6">
         <Image
           src="/banner-1.svg"
           alt="Até 30% de desconto em pizzas"
@@ -28,7 +28,9 @@ export default function Home() {
         />
       </div>
 
-      <ProductList />
+      <div className="pt-6">
+        <ProductList />
+      </div>
     </>
   );
 }
