@@ -58,7 +58,7 @@ const Home = async () => {
         <PromoBanner src="/banner-2.svg" alt="A partir de 17,90 em lanches" />
       </div>
 
-      <div className="space-y-4 pt-6">
+      <div className="pt-6">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Restaurantes Recomendados</h2>
           <Button
