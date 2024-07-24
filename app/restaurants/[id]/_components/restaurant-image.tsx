@@ -3,7 +3,7 @@
 import { Button } from "@/app/_components/ui/button";
 import { Restaurant } from "@prisma/client";
 import { Pick } from "@prisma/client/runtime/library";
-import { ChevronLeftIcon } from "lucide-react";
+import { ChevronLeftIcon, HeartIcon } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -30,6 +30,13 @@ const RestaurantImage = ({ restaurant }: RestaurantImageProps) => {
         onClick={handleBackClick}
       >
         <ChevronLeftIcon />
+      </Button>
+
+      <Button
+        size="icon"
+        className="absolute right-4 top-4 rounded-full bg-gray-700"
+      >
+        <HeartIcon size={20} className="fill-white" />
       </Button>
     </div>
   );
