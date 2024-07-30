@@ -6,9 +6,12 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="flex justify-between px-5 pt-6">
-      <Link href="/">
-        <Image src="/logo.png" alt="logo" height={30} width={100} />
-      </Link>
+      <div className="relative h-[30px] w-[100px]">
+        <Link href="/">
+          <Image src="/logo.png" alt="logo" fill className="object-contain" />
+        </Link>
+      </div>
+
       <Button
         size="icon"
         variant="outline"
