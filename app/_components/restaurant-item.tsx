@@ -9,9 +9,9 @@ import Link from "next/link";
 import { cn } from "../_lib/utils";
 import { toggleFavoriteRestaurant } from "../_actions/restaurants";
 import { toast } from "sonner";
+import { useSession } from "next-auth/react";
 
 interface RestaurantItemProps {
-  userId?: string;
   restaurant: Restaurant;
   className?: string;
   userFavoriteRestaurants: UserFavoriteRestaurant[];
@@ -20,16 +20,16 @@ interface RestaurantItemProps {
 const RestaurantItem = ({
   restaurant,
   className,
-  userId,
   userFavoriteRestaurants,
 }: RestaurantItemProps) => {
+  const { data } = useSession();
   const IsFavorite = userFavoriteRestaurants.some(
     (fav) => fav.restaurantId === restaurant.id,
   );
   const handleFavoriteClick = async () => {
-    if (!userId) return;
+    if (!data?.user?.id) return;
     try {
-      await toggleFavoriteRestaurant(userId, restaurant.id);
+      await toggleFavoriteRestaurant(data?.user.id, restaurant.id);
       return toast.success(
         IsFavorite
           ? "Restaurante removido dos favoritos"
@@ -45,7 +45,6 @@ const RestaurantItem = ({
       <div className="w-full space-y-3 py-6">
         <div className="relative h-[136px] w-full">
           <Link href={`restaurants/${restaurant.id}`}>
-            {" "}
             <Image
               src={restaurant.imageUrl}
               alt={restaurant.name}
@@ -59,7 +58,7 @@ const RestaurantItem = ({
             <span className="text-xs font-semibold">5.0</span>
           </div>
 
-          {userId && (
+          {!data?.user?.id && (
             <Button
               size="icon"
               className={`absolute right-2 top-2 h-7 w-7 rounded-full bg-gray-700 ${IsFavorite && "bg-primary hover:bg-gray-700"}`}
