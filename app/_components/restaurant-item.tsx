@@ -7,7 +7,7 @@ import { formatCurrency } from "../_helpers/price";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { cn } from "../_lib/utils";
-import { favoriteRestaurant } from "../_actions/restaurants";
+import { toggleFavoriteRestaurant } from "../_actions/restaurants";
 import { toast } from "sonner";
 
 interface RestaurantItemProps {
@@ -29,8 +29,12 @@ const RestaurantItem = ({
   const handleFavoriteClick = async () => {
     if (!userId) return;
     try {
-      await favoriteRestaurant(userId, restaurant.id);
-      toast.success("Restaurante favoritado com sucesso!");
+      await toggleFavoriteRestaurant(userId, restaurant.id);
+      return toast.success(
+        IsFavorite
+          ? "Restaurante removido dos favoritos"
+          : "Restaurante favoritado",
+      );
     } catch (error) {
       toast.error("Erro ao favoritar o restaurante!");
     }
