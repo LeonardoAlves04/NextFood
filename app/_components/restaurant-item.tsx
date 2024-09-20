@@ -23,7 +23,7 @@ const RestaurantItem = ({
   userFavoriteRestaurants,
 }: RestaurantItemProps) => {
   const { data } = useSession();
-  const IsFavorite = userFavoriteRestaurants.some(
+  const isFavorite = userFavoriteRestaurants.some(
     (fav) => fav.restaurantId === restaurant.id,
   );
   const handleFavoriteClick = async () => {
@@ -31,7 +31,7 @@ const RestaurantItem = ({
     try {
       await toggleFavoriteRestaurant(data?.user.id, restaurant.id);
       return toast.success(
-        IsFavorite
+        isFavorite
           ? "Restaurante removido dos favoritos"
           : "Restaurante favoritado",
       );
@@ -58,10 +58,10 @@ const RestaurantItem = ({
             <span className="text-xs font-semibold">5.0</span>
           </div>
 
-          {!data?.user?.id && (
+          {data?.user?.id && (
             <Button
               size="icon"
-              className={`absolute right-2 top-2 h-7 w-7 rounded-full bg-gray-700 ${IsFavorite && "bg-primary hover:bg-gray-700"}`}
+              className={`absolute right-2 top-2 h-7 w-7 rounded-full bg-gray-700 ${isFavorite && "bg-primary hover:bg-gray-700"}`}
               onClick={handleFavoriteClick}
             >
               <HeartIcon size={16} className="fill-white" />
