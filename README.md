@@ -8,7 +8,7 @@
   <img src="http://img.shields.io/static/v1?label=Prisma&message=ORM&color=red&style=for-the-badge&logo=Prisma"/>
 </p>
 
-> Status do Projeto: :heavy_check_mark: Em andamento!!!
+> Status do Projeto: :heavy_check_mark: Concluído!!
 
 ## Linguagens e libs utilizadas :books:
 
@@ -27,5 +27,9 @@
 - shadcn/ui: Uma biblioteca de componentes de IU reutilizáveis e estilizáveis.
 
 - API do Stripe: Uma API de pagamento popular para processar pagamentos online de forma segura.
+  
+## Link do deploy
+
+https://next-food-eight.vercel.app/
 
 ## Imagens do projeto:
