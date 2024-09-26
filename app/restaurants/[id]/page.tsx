@@ -99,7 +99,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
         {restaurant.categories.map((category) => (
           <div
             key={category.id}
-            className="min-w-[167px] rounded-lg bg-[#f4f4f4] text-center"
+            className="min-w-[167px] rounded-lg bg-gray-300 text-center lg:m-auto"
           >
             <span className="text-xs text-muted-foreground">
               {category.name}
@@ -109,13 +109,17 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
       </div>
 
       <div className="mt-6 space-y-4">
-        <h2 className="px-5 font-semibold">Mais pedidos</h2>
+        <h2 className="px-5 font-semibold lg:flex lg:justify-center">
+          Mais pedidos
+        </h2>
         <ProductList products={restaurant.products} />
       </div>
 
       {restaurant.categories.map((category) => (
         <div className="mt-6 space-y-4" key={category.id}>
-          <h2 className="px-5 font-semibold">{category.name}</h2>
+          <h2 className="px-5 font-semibold lg:flex lg:justify-center">
+            {category.name}
+          </h2>
           <ProductList products={category.products} />
         </div>
       ))}

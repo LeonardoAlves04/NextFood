@@ -10,7 +10,7 @@ interface DeliveryInfoProps {
 const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
   return (
     <div>
-      <Card className="mt-6 flex justify-around py-3">
+      <Card className="mt-6 flex justify-around py-3 lg:m-auto lg:flex lg:w-[60rem]">
         {/* CUSTO DA ENTREGA */}
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1 text-muted-foreground">

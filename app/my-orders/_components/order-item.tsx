@@ -63,7 +63,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
     <Card>
       <CardContent className="space-y-3 p-5">
         <div
-          className={`w-fit rounded-full bg-[#EEEEEE] bg-muted px-2 py-1 text-muted-foreground ${order.status !== "COMPLETED" && "bg-green-500 text-white"}`}
+          className={`w-fit rounded-full bg-[#EEEEEE] bg-muted px-2 py-1 text-muted-foreground ${order.status !== "COMPLETED" && "bg-green-400 text-black"}`}
         >
           <span className="p block text-xs font-semibold">
             {getOrderStatusLabel(order.status)}
@@ -100,7 +100,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
                   {product.quantity}
                 </span>
               </div>
-              <span className="block text-xs text-muted-foreground">
+              <span className="ml-1 block text-xs text-muted-foreground">
                 {product.product.name}
               </span>
             </div>
