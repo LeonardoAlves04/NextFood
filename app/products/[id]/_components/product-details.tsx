@@ -154,7 +154,7 @@ const ProductDetails = ({
 
         <div className="mt-6 px-5">
           <Button
-            className="w-full font-semibold"
+            className="w-full font-semibold lg:m-auto lg:flex lg:w-[20rem]"
             onClick={handleAddToCartClick}
           >
             Adicionar à sacola
