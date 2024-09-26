@@ -40,7 +40,7 @@ Um app de pedidos de comidas/lanches (semelhante ao ifood, aiqfome, etc...). Nes
 
 ## Deploy da Aplicação :dash:
 
-Deploy: [next-food-eight.vercel.app] (next-food-eight.vercel.app)
+Deploy: [next-food-eight.vercel.app](next-food-eight.vercel.app)
 
 ## Linguagens e libs utilizadas :books:
 
