@@ -60,7 +60,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
   };
 
   return (
-    <Card>
+    <Card className="lg:h-[20rem] lg:w-[50rem]">
       <CardContent className="space-y-3 p-5">
         <div
           className={`w-fit rounded-full bg-[#EEEEEE] bg-muted px-2 py-1 text-muted-foreground ${order.status !== "COMPLETED" && "bg-green-400 text-black"}`}

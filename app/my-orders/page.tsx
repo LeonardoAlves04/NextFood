@@ -32,7 +32,7 @@ const MyOrdersPage = async () => {
 
       <div className="px-5 py-6">
         <h2 className="pb-6 text-lg font-semibold">Meus Pedidos</h2>
-        <div className="space-y-4">
+        <div className="lg:flex-column space-y-5 lg:flex lg:flex-wrap lg:justify-between lg:gap-5 lg:space-y-0">
           {orders.map((order) => (
             <OrderItem key={order.id} order={order} />
           ))}
