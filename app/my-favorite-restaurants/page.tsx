@@ -26,13 +26,13 @@ const MyFavoriteRestaurants = async () => {
       <Header />
       <div className="px-5 py-6">
         <h2 className="text-lg font-semibold">Restaurantes favoritos</h2>
-        <div className="flex w-full flex-col">
+        <div className="lg:flex lg:flex-wrap lg:gap-4">
           {userFavoriteRestaurants.length > 0 ? (
             userFavoriteRestaurants.map(({ restaurant }) => (
               <RestaurantItem
                 key={restaurant.id}
                 restaurant={restaurant}
-                className="min-w-full max-w-full"
+                className="min-w-full max-w-full lg:min-w-[20rem]"
                 userFavoriteRestaurants={userFavoriteRestaurants}
               />
             ))
