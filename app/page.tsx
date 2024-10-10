@@ -73,7 +73,9 @@ const Home = async () => {
 
       <div className="space-y-4 pt-6">
         <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold lg:m-auto">Pedidos Recomendados</h2>
+          <h2 className="font-semibold lg:m-auto lg:text-2xl">
+            Pedidos Recomendados
+          </h2>
 
           <Button
             variant="ghost"
@@ -98,7 +100,9 @@ const Home = async () => {
 
       <div className="pt-6">
         <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold lg:m-auto">Restaurantes Recomendados</h2>
+          <h2 className="font-semibold lg:m-auto lg:text-2xl">
+            Restaurantes Recomendados
+          </h2>
 
           <Button
             variant="ghost"
