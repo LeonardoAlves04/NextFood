@@ -36,10 +36,10 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
     <>
       <Header />
       <div className="px-5 py-6">
-        <h2 className="mb-6 text-lg font-semibold lg:flex lg:justify-center">
+        <h2 className="mb-6 text-lg font-semibold lg:flex lg:justify-center lg:text-4xl">
           {category.name}
         </h2>
-        <div className="grid grid-cols-2 gap-6 lg:flex lg:flex-wrap lg:justify-center">
+        <div className="grid grid-cols-2 gap-6 lg:ml-[50px] lg:flex lg:flex-wrap lg:justify-start">
           {category?.products.map((product) => (
             <ProductItem
               product={product}
